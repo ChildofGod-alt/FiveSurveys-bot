@@ -4,7 +4,7 @@ import time
 import random
 
 # === Configuration ===
-EMAIL = "yourbotemail@example.com"
+EMAIL = "precieux2911@gmail.com"
 SURVEYS_TO_COMPLETE = random.randint(10, 15)  # Random daily target
 ANSWER_WAIT_RANGE = (1.5, 4.5)  # Delay range between answers to simulate human behavior
 
