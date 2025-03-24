@@ -1,15 +1,16 @@
-# Use a compatible Playwright image based on Ubuntu 20.04 (focal)
-FROM mcr.microsoft.com/playwright/python:v1.32.0-focal
+# Use the official Playwright base image with Python 3.10
+FROM mcr.microsoft.com/playwright/python:v1.43.1-jammy
 
-# Set working directory
+# Set the working directory
 WORKDIR /app
 
-# Copy all project files
+# Copy the current directory contents into the container
 COPY . .
 
-# Install dependencies
+# Install Python dependencies and Playwright browsers
 RUN pip install --upgrade pip \
-    && pip install -r requirements.txt
+    && pip install -r requirements.txt \
+    && playwright install --with-deps
 
-# Run your bot
+# Run the bot script
 CMD ["python", "fivesurveys_bot.py"]
