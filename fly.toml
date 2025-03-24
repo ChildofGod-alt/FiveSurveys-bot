@@ -1,0 +1,12 @@
+app = "five-surveys-bot"
+
+[build]
+  dockerfile = "Dockerfile"
+
+[env]
+  SURVEY_LIMIT = "15"
+  EMAIL = "precieux2911@gmail.com"
+  PASSWORD = "Dieutoutpuissant12-"
+
+[experimental]
+  auto_rollback = true
